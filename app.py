@@ -3,8 +3,8 @@ import pickle
 import numpy as np
 import pandas as pd
 model = pickle.load(
-    open('C:\DHANUSH\ML\BengaluruHousePricePrediction\galore_home_prices_model.pkl', 'rb'))
-df = pd.read_csv('C:\DHANUSH\ML\BengaluruHousePricePrediction\df12.csv')
+    open('galore_home_prices_model.pkl', 'rb'))
+df = pd.read_csv('df12.csv')
 x = df.drop(['Unnamed: 0', 'price'], axis=1)
 def predict_price(location, sqft, bath, bhk):
     l = list(x.columns)
